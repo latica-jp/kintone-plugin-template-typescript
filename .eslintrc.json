@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "@cybozu/eslint-config",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "babel",
+    "jest"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "consistent-return": "off",
+    "no-invalid-this": "off",
+    "babel/no-invalid-this": "warn",
+    "@typescript-eslint/no-empty-interface": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "info",
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-irregular-whitespace": "off",
+    // https://github.com/typescript-eslint/typescript-eslint/issues/420
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    }
+  ]
+}

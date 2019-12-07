@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "desktop": {
+    "js": [
+      "dist/desktop.js"
+    ],
+    "css": [
+      "css/51-modern-default.css",
+      "css/desktop.css"
+    ]
+  },
+  "icon": "image/icon.png",
+  "config": {
+    "html": "html/config.html",
+    "js": [
+      "dist/config.js"
+    ],
+    "css": [
+      "css/51-modern-default.css",
+      "css/config.css"
+    ],
+    "required_params": [
+      "message"
+    ]
+  },
+  "name": {
+    "en": "kintone-plugin-template-typescript",
+    "ja": "kintone-plugin-template-typescript"
+  },
+  "description": {
+    "en": "kintone-plugin-template-typescript",
+    "ja": "kintone-plugin-template-typescript"
+  }
+}
