@@ -94,6 +94,13 @@ yarn start
   - 失敗した場合は（めげずに）リトライしてください。
 - 監視モードの実装が不完全なためか、自動ビルドとアップロードがうまくいかなくなることが（ときどき）あります。その場合はいったん ctrl-c でプロセスを停止して、再度 `yarn start` を再実行してください。
 
+## ビルドについてのメモ
+
+- TypeScript のトランスパイルは `tsc` ではなく `@babel/preset-typescript` で行っている
+  - 型チェックは `tsc` で行っている（`fork-ts-checker-webpack-plugin`）
+- @babel/preset-env
+  - `corejs: { version: 3, proposals: true }` で proposal も含めた polyfill を入れている
+
 ## License
 
 MIT
