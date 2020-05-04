@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   const isTest = api.env('test')
   return {
     presets: [
@@ -6,15 +6,14 @@ module.exports = api => {
         '@babel/preset-env',
         {
           targets: {
-            browsers: ['last 1 versions', 'iOS 10-12'],
+            browsers: ['last 1 versions', 'iOS 12-13'],
           },
           useBuiltIns: 'usage',
-          corejs: 3,
+          corejs: { version: 3, proposals: true },
           modules: isTest ? 'commonjs' : false,
         },
       ],
       ['@babel/typescript'],
     ],
-    plugins: ['@babel/proposal-class-properties', '@babel/plugin-proposal-optional-chaining'],
   }
 }

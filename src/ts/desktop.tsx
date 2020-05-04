@@ -1,5 +1,5 @@
 ;((pluginId: string): void => {
-  kintone.events.on('app.record.index.show', event => {
+  kintone.events.on('app.record.index.show', (event) => {
     const config = kintone.plugin.app.getConfig(pluginId)
 
     const spaceElement = kintone.app.getHeaderSpaceElement()
