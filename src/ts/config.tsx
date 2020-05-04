@@ -5,7 +5,7 @@
 
   const config = kintone.plugin.app.getConfig(pluginId)
   if (config.message) {
-    ;(message as HTMLInputElement).value = config.message
+    message.value = config.message
   }
   form.addEventListener('submit', (e) => {
     e.preventDefault()
